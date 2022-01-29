@@ -1,6 +1,5 @@
 import uniq from 'lodash/uniq';
 import includes from 'lodash/includes';
-import { rand } from './rand';
 
 const frequency = {
   'e': 12000,

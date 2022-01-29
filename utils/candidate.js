@@ -1,4 +1,5 @@
 import uniq from 'lodash/uniq';
+import includes from 'lodash/includes';
 import { rand } from './rand';
 
 const frequency = {
@@ -40,12 +41,7 @@ const getRawScore = (word) => {
   return score
 }
 
-export const candidate = (array) => {
-  // if there is s samllish remaining set, pick at random
-  if (array.length < 20) {
-    return rand(array);
-  }
-  
+export const candidate = (array, selected) => {
   // get a ranking of each word based on the
   // sum value of the frequency of each char
   // and multiply the sum by number of uniq chars
@@ -54,6 +50,10 @@ export const candidate = (array) => {
     var raw_score = parseInt(getRawScore(word), 10);
     var multiplier = uniq(word.split('')).length;
     var score = raw_score * multiplier;
+    if (includes(selected, word)) { // we know that this can not be the word
+      console.log('SELECTED WORD ZERO', word);
+      score = 0;
+    }
     rank[score] = word;
   })
 

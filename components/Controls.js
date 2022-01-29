@@ -52,7 +52,10 @@ export const Controls = () => {
   }
 
   const handleNext = () => {
-    var word = candidate(filtered);
+    var selected = rows.map((row) => (
+      row ? row.join('') : null
+    )).filter((el) => (el.length));
+    var word = candidate(filtered, selected);
     var row = 0;
     for (var i = 0; i < rows.length; i++) {
       if (rows[i][0]) {

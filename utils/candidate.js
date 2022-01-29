@@ -1,4 +1,5 @@
 import uniq from 'lodash/uniq';
+import { rand } from './rand';
 
 const frequency = {
   'e': 12000,
@@ -40,17 +41,22 @@ const getRawScore = (word) => {
 }
 
 export const candidate = (array) => {
-  var rank = {}
+  // if there is s samllish remaining set, pick at random
+  if (array.length < 20) {
+    return rand(array);
+  }
   
   // get a ranking of each word based on the
   // sum value of the frequency of each char
   // and multiply the sum by number of uniq chars
+  var rank = {}
   array.forEach((word) => {
     var raw_score = parseInt(getRawScore(word), 10);
     var multiplier = uniq(word.split('')).length;
     var score = raw_score * multiplier;
     rank[score] = word;
   })
+
 
   // initialize the highest score and word with the best score
   var highest = 0;

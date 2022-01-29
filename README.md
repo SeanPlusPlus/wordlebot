@@ -2,6 +2,10 @@
 
 A little hack that tries to solve the daily wordle.
 
+https://wordlebot-seanplusplus.vercel.app/
+
+https://twitter.com/WordleBot_xyz
+
 ### Run locally
 
 To run this project locally, follow these steps.

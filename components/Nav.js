@@ -55,20 +55,20 @@ export const Nav = () => {
             challenge as efficiently as possible.
           </p>
           <p className="pt-4">
-            The idea for this project legit came to me the first time I ever attempted the wordle ... I immediately thought to myself, hey this would be a super fun side project to code a solution for! (I&apos;m kinda always keeping an eye out for these side-hack things to mess around with new tech.) After a few hours of dev, chatting with some good buddies, and a good bit of trial and error, I&apos;ve got this prototype up and running.
+            The idea for this project came to me the first time I ever attempted the wordle ... I immediately thought to myself, hey this would be a super fun side project to code a solution for! (I&apos;m kinda always keeping an eye out for these kind of side-hack things to mess around with new tech.) After a few hours of dev, chatting with some good buddies, and a good bit of trial and error, I got this prototype up and running.
           </p>
           <p className="pt-4">
             Hopefully the idea here is pretty straightforward. After you play the daily wordle, head on over here to the bot and see if it does better than you did!
           </p>
           <p className="pt-4">
-            Lastly, the controls here are very much a work in progress. Click <code>START</code> to randomly generate a word. Then go to the wordle site and enter that word. After wordle displays the status of each character [
+            The UX here is very much a work in progress, but here is the gist of how to play: click <code>START</code> to randomly generate a word. Then go to the wordle site and enter that word. After wordle displays the status of each character [
             <span className="pl-1 pr-1" role="img" aria-label="green">🟩</span>
             <span className="pl-1 pr-1" role="img" aria-label="yello">🟨</span>
             <span className="pl-1 pr-1" role="img" aria-label="gray">⬜️</span>
             ] click on the corresponding square for the bot. When you are ready for a new word, click <code>NEXT</code>.
           </p>
           <p className="pt-4">
-            Lastly, the controls here are very much a work in progress. Let me know how I can improve the UI and if you see any bugs (massive bonus points if you include a screenshot). But for real, I mega appreciate you stopping by and am stoked that you are here checking out the bot!!!
+            Lastly, I would mega appreciate any feedback on how I can improve the product as well as if you see any bugs (massive bonus points if you include a screenshot). But for real, ultimately, I just mega appreciate you stopping by and am stoked that you are here checking out the bot!!!
           </p>
           <p className="pt-4">
             <a

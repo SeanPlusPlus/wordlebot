@@ -17,7 +17,7 @@ export const Nav = () => {
         <div className="flex-1 px-2 mx-2">
           <span className="text-lg font-bold">
             <div className="flex">
-              Wordle Bot<span className="ml-2 text-2xl" role="img" aria-label="logo">🤖</span>
+              WordleBot<span className="ml-2 text-2xl" role="img" aria-label="logo">🤖</span>
             </div>
           </span>
         </div> 
@@ -40,10 +40,10 @@ export const Nav = () => {
             <span className="pl-1 pr-1" role="img" aria-label="wave">👋</span>
           </div>
           <p className="pt-4">
-            Thanks for taking the time to check out the Wordle Bot!
+            Thanks for taking the time to check out the WordleBot!
           </p>
           <p className="pt-4">
-            I&apos;m hacking together a little
+            I&apos;ve been hacking together a little
             <span className="text-2xl pl-1 pr-1" role="img" aria-label="logo">🤖</span>
             that tries to solve the daily 
             <a href=""
@@ -55,7 +55,7 @@ export const Nav = () => {
             challenge as efficiently as possible.
           </p>
           <p className="pt-4">
-            The idea for this project came to me the first time I ever attempted wordle ... I immediately thought to myself, hey this would be a super fun side project to code a solution for! (I&apos;m kinda always keeping an eye out for these side-hack things to mess around with new tech.) After a few hours of dev, chatting with some good buddies, and a good bit of trial and error, I&apos;ve got this prototype up and running.
+            The idea for this project legit came to me the first time I ever attempted the wordle ... I immediately thought to myself, hey this would be a super fun side project to code a solution for! (I&apos;m kinda always keeping an eye out for these side-hack things to mess around with new tech.) After a few hours of dev, chatting with some good buddies, and a good bit of trial and error, I&apos;ve got this prototype up and running.
           </p>
           <p className="pt-4">
             Hopefully the idea here is pretty straightforward. After you play the daily wordle, head on over here to the bot and see if it does better than you did!

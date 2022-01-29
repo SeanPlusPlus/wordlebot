@@ -14,6 +14,7 @@ const initialState = {
   },
   words: [],
   filtered: [],
+  solved: false,
 }
 
 export const GlobalContext = createContext(initialState);
@@ -45,6 +46,13 @@ export const GlobalProvider = ({
     });
   }
 
+  function setSolved(data) {
+    dispatch({
+      type: 'SET_SOLVED',
+      payload: data 
+    });
+  }
+
   useEffect(() => {
     log('state', 'green', state);
   }, [state])
@@ -54,9 +62,11 @@ export const GlobalProvider = ({
         grid: state.grid,
         words: state.words,
         filtered: state.filtered,
+        solved: state.solved, 
         setGrid,
         setSquare,
         setWords,
+        setSolved,
       }
     } > {
       children

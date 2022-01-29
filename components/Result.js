@@ -1,26 +1,17 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext,  useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
 export const Result = () => {
-  const [ solved, setSolved ] = useState(false);
   const {
-    grid: { status },
     words,
     filtered,
+    solved,
+    setSolved
   } = useContext(GlobalContext);
 
   useEffect(() => {
     if (words.length) {
-      const keys = Object.keys(status);
-      const valid = keys
-        .sort()
-        .reverse()
-        .slice(0, 5)
-        .map((el) => status[el])
-        .every((el) => (el === 'valid'));
-      if (valid) {
-        setSolved(true);
-      }
+      setSolved();
     }
   }, [filtered]);
 

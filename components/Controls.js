@@ -25,10 +25,11 @@ export const Controls = () => {
     setGrid,
     setWords,
     setSquare,
+    solved,
   } = useContext(GlobalContext);
 
   useEffect(() => {
-    setDisabled(filtered.length === 0);
+    setDisabled((filtered.length === 0) || solved);
   }, [filtered]);
 
   async function fetchWords() {

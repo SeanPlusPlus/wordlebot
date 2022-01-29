@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
   return (
     <footer className="text-center pt-20 pb-10">
-      <div class="divider" />
+      <div className="divider" />
       <p>
       Built by 
         <a

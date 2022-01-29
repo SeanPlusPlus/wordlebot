@@ -46,7 +46,7 @@ export const Nav = () => {
             I&apos;ve been hacking together a little
             <span className="text-2xl pl-1 pr-1" role="img" aria-label="logo">🤖</span>
             that tries to solve the daily 
-            <a href=""
+            <a href="https://www.powerlanguage.co.uk/wordle/"
               target="_blank"
               rel="noopener noreferrer"
               className="link link-primary pl-1 pr-1" >

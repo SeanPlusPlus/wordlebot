@@ -32,3 +32,7 @@
 .grey {
   background-color: rgb(112,128,144);
 }
+
+.words {
+  width: 300px;
+}

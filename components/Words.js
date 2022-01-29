@@ -8,7 +8,7 @@ export const Words = () => {
   } = useContext(GlobalContext);
 
   return (
-    <div className="pt-3">
+    <div className="pt-3 words">
       <p>
         <span className="pr-1">
           Possible words:

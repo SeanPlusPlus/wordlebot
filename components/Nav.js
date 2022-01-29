@@ -72,16 +72,6 @@ export const Nav = () => {
           </p>
           <p className="pt-4">
             <a
-              href="https://github.com/SeanPlusPlus/wordlebot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link link-primary pl-1"
-            >
-              WorldeBot Github
-            </a>
-          </p>
-          <p className="pt-4">
-            <a
               href="https://twitter.com/seanplusplus"
               target="_blank"
               rel="noopener noreferrer"
@@ -101,6 +91,14 @@ export const Nav = () => {
             </a>
           </p>
           <p className="pt-4">
+            <a
+              href="https://github.com/SeanPlusPlus/wordlebot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link link-primary pl-1"
+            >
+              WorldeBot Github
+            </a>
           </p>
           <div className="modal-action">
             <a  className="btn" onClick={close}>Close</a>

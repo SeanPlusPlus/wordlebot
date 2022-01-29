@@ -1,6 +1,5 @@
 import uniq from 'lodash/uniq';
 
-
 const frequency = {
   'e': 12000,
   't': 9000,

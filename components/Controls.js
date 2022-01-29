@@ -46,6 +46,7 @@ export const Controls = () => {
     setStarted(true);
     fetchWords();
     var word = rand(starting);
+    word = 'shine';
     word.split('').forEach((char) => {
       setGrid(char);
     });

@@ -29,7 +29,7 @@ export const Controls = () => {
 
   useEffect(() => {
     setDisabled(filtered.length === 0);
-  });
+  }, [filtered]);
 
   async function fetchWords() {
     await fetch(`/words.txt`)

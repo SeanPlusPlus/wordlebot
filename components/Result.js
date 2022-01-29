@@ -1,11 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
 export const Result = () => {
+  const [ solved, setSolved ] = useState(false);
   const {
+    grid: { rows },
     words,
     filtered,
   } = useContext(GlobalContext);
+
+  useEffect(() => {
+    console.log(filtered, rows);
+  }, [filtered]);
 
   return (
     <div className="pt-3 words">

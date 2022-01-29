@@ -8,9 +8,6 @@ import { log } from '../utils/logger'
 import { getGrid } from '../utils/grid'
 
 const initialState = {
-  user: {
-    loggedIn: false,
-  },
   grid: {
     rows: getGrid(),
     status: {},

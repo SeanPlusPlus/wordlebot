@@ -29,8 +29,12 @@ export const Controls = () => {
   } = useContext(GlobalContext);
 
   useEffect(() => {
-    setDisabled((filtered.length === 0) || solved);
-  }, [filtered]);
+    if (solved) {
+      setDisabled(true);
+    } else {
+      setDisabled(filtered.length === 0);
+    }
+  }, [filtered, solved]);
 
   async function fetchWords() {
     await fetch(`/words.txt`)

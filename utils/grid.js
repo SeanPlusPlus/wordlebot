@@ -94,8 +94,18 @@ export const parseGrid = (grid, status, payload, new_row) => {
       }
     }
   }
-
   not_present = uniq(not_present);
+
+  // remove duplicates from our present array
+  var s = new Set()
+  for (var i = 0; i < present.length; i++) {
+    if (s.has(present[i].char)) {
+      present[i].char = '';
+      present[i].pos = null;
+    } else {
+      s.add(present[i].char);
+    }
+  }
 
   // console.log(not_present, present);
   log('NOT_PRESENT', 'yellow', not_present);

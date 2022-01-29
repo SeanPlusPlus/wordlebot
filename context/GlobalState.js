@@ -24,13 +24,6 @@ export const GlobalProvider = ({
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // Actions for changing state
-  function setUser(data) {
-    dispatch({
-      type: 'UPDATE_USER',
-      payload: data 
-    });
-  }
-
   function setGrid(data) {
     dispatch({
       type: 'UPDATE_GRID',
@@ -58,11 +51,9 @@ export const GlobalProvider = ({
 
   return ( <GlobalContext.Provider value = {
       {
-        user: state.user,
         grid: state.grid,
         words: state.words,
         filtered: state.filtered,
-        setUser,
         setGrid,
         setSquare,
         setWords,

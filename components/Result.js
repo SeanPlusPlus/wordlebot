@@ -21,7 +21,7 @@ export const Result = () => {
         <p>
           We got it 
           <span className="pl-1">
-            <span role="img" aria-label="party">🎉</span>
+            <span role="img" aria-label="smile">😃</span>
           </span>
         </p>
       )}

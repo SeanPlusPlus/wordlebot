@@ -30,11 +30,7 @@ export const Controls = () => {
   } = useContext(GlobalContext);
 
   useEffect(() => {
-    if (solved) {
-      setDisabled(true);
-    } else {
-      setDisabled(filtered.length === 0);
-    }
+    setDisabled(filtered.length === 0);
   }, [filtered, solved]);
 
   async function fetchWords() {
@@ -78,7 +74,22 @@ export const Controls = () => {
  
   return (
     <div className="pb-3">
-      {!started && (
+      {solved && (
+        <button
+          className="btn btn-info pointer-events-none"
+          role="button"
+          aria-pressed="true"
+        >
+          <span className="pr-1">
+            <span role="img" aria-label="party">🎉</span>
+          </span>
+            Woooooohooooooooooo
+          <span className="pl-1">
+            <span role="img" aria-label="party">🎉</span>
+          </span>
+        </button>
+      )}
+      {!started && !solved && (
         <button
           className="btn btn-primary btn-active"
           role="button"
@@ -88,7 +99,7 @@ export const Controls = () => {
           START
         </button>
       )}
-      {started && (
+      {started && !solved && (
         <button
           className="btn btn-primary btn-active"
           role="button"

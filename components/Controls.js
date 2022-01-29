@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 import { rand } from '../utils/rand'
+import { candidate } from '../utils/candidate'
 
 const starting = [
   'slate',
@@ -55,14 +56,13 @@ export const Controls = () => {
   }
 
   const handleNext = () => {
-    var word = rand(filtered);
+    var word = candidate(filtered);
     var row = 0;
     for (var i = 0; i < rows.length; i++) {
       if (rows[i][0]) {
         row += 1;
       }
     }
-    console.log('row', row);
     word.split('').forEach((char, idx) => {
       setGrid(char);
       setSquare({

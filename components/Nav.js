@@ -43,7 +43,7 @@ export const Nav = () => {
             Thanks for taking the time to check out the Wordle Bot!
           </p>
           <p className="pt-4">
-            I'm hacking together a little
+            I&apos;m hacking together a little
             <span className="text-2xl pl-1 pr-1" role="img" aria-label="logo">🤖</span>
             that tries to solve the daily 
             <a href=""
@@ -55,7 +55,7 @@ export const Nav = () => {
             challenge as efficiently as possible.
           </p>
           <p className="pt-4">
-            The idea for this project came to me the first time I ever attempted wordle ... I immediately thought to myself, hey this would be a super fun side project to code a solution for! (I'm kinda always keeping an eye out for these side-hack things to mess around with new tech.) After a few hours of dev, chatting with some good buddies, and a good bit of trial and error, I've got this prototype up and running.
+            The idea for this project came to me the first time I ever attempted wordle ... I immediately thought to myself, hey this would be a super fun side project to code a solution for! (I&apos;m kinda always keeping an eye out for these side-hack things to mess around with new tech.) After a few hours of dev, chatting with some good buddies, and a good bit of trial and error, I&apos;ve got this prototype up and running.
           </p>
           <p className="pt-4">
             Hopefully the idea here is pretty straightforward. After you play the daily wordle, head on over here to the bot and see if it does better than you did!

@@ -3,7 +3,7 @@ import React from 'react'
 // components
 import { Controls } from '../components/Controls'
 import { Game } from '../components/Game'
-import { Words } from '../components/Words'
+import { Result } from '../components/Result'
 
 export const Main = () => {
   return (
@@ -11,7 +11,7 @@ export const Main = () => {
       <div className="m-auto">
         <Controls />
         <Game />
-        <Words />
+        <Result />
       </div>
     </main>
   )

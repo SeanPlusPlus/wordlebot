@@ -68,7 +68,7 @@ export const Nav = () => {
             ] click on the corresponding square for the bot. When you are ready for a new word, click <code>NEXT</code>.
           </p>
           <p className="pt-4">
-            Lastly, the controls here are very much a work in progress. Let me know how I can improve the UI and if you see any bugs! I mega appreciate you stopping by!!!
+            Lastly, the controls here are very much a work in progress. Let me know how I can improve the UI and if you see any bugs (massive bonus points if you include a screenshot). But for real, I mega appreciate you stopping by and am stoked that you are here checking out the bot!!!
           </p>
           <p className="pt-4">
             <a

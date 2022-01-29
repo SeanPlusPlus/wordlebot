@@ -84,18 +84,6 @@ export const parseGrid = (grid, status, payload, new_row) => {
     }
   }
 
-  // remove any items from not_present that we know are present
-  for (var i = 0; i < present.length; i++) {
-    var char = present[i].char;
-    if (char) {
-      var index = not_present.indexOf(char);
-      if (index > -1) {
-        not_present.splice(index, 1); 
-      }
-    }
-  }
-  not_present = uniq(not_present);
-
   // remove duplicates from our present array
   var s = new Set()
   for (var i = 0; i < present.length; i++) {
@@ -106,6 +94,12 @@ export const parseGrid = (grid, status, payload, new_row) => {
       s.add(present[i].char);
     }
   }
+
+  // remove any items from not_present that we know are present
+  s.forEach((el) => {
+    not_present = not_present.filter((item) => (item !== el));
+  })
+  not_present = uniq(not_present);
 
   // console.log(not_present, present);
   log('NOT_PRESENT', 'yellow', not_present);

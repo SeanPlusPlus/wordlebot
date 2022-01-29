@@ -30,9 +30,9 @@ export const Result = () => {
         <div className="card card-bordered mt-3">
           <div className="card-body">
             <div className="flex flex-wrap max-w-fit">
-                {filtered.map((word) => (
-                  <div key={word} className="p-1">{word}</div>
-                ))}
+              {filtered.map((word) => (
+                <div key={word} className="p-1">{word}</div>
+              ))}
             </div>
           </div>
         </div>

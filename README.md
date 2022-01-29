@@ -1,6 +1,6 @@
 # Wordle Bot
 
-A little hack that tries to solve the daily wordle.
+A little side hack that tries to solve the daily wordle
 
 https://wordlebot-seanplusplus.vercel.app/
 

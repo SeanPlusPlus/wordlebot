@@ -30,6 +30,7 @@ export const Game = () => {
       status,
     },
     setSquare,
+    solved,
   } = useContext(GlobalContext);
 
   const getBackground = (i, idx) => {
@@ -51,6 +52,10 @@ export const Game = () => {
   }
 
   const handleClick = (i, idx) => {
+    if (solved) {
+      return
+    }
+
     const char = rows[i][idx];
     if (!char) {
       return

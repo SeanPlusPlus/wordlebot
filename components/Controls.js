@@ -99,7 +99,7 @@ export const Controls = () => {
           aria-pressed="true"
           onClick={handleInit}
         >
-          START
+          GET THE FIRST WORD &amp; START
         </button>
       )}
       {started && !solved && (
@@ -110,7 +110,7 @@ export const Controls = () => {
           onClick={handleNext}
           disabled={disabled}
         >
-          NEXT
+          GENERATE THE NEXT WORD
         </button>
       )}
     </div>

@@ -105,8 +105,8 @@ export const Controls = () => {
       )}
       {started && !solved && (
         <button
-          data-tip="click on a letter"
-          className={`btn btn-primary btn-active ${started && "tooltip tooltip-open tooltip-bottom"}`}
+          data-tip="now click on a letter"
+          className={`btn btn-primary btn-active ${!engaged && "tooltip tooltip-open tooltip-bottom"}`}
           role="button"
           aria-pressed="true"
           onClick={handleNext}

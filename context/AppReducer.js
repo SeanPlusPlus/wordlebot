@@ -27,6 +27,7 @@ export default (state, action) => {
           }
         },
         filtered: filterWords(state.words, parseGrid(state.grid, state.grid.status, action.payload)),
+        engaged: true,
       }
     case 'INIT_WORDS':
       return {

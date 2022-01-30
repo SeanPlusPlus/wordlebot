@@ -8,7 +8,7 @@ export default (state, action) => {
   log('prev state', 'gray', state);
   log('action', 'red', action);
   switch (action.type) {
-    case 'UPDATE_GRID':
+    case 'UPDATE_GRID_CHAR':
       return {
         ...state,
         grid: {

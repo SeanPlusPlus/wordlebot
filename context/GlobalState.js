@@ -15,6 +15,7 @@ const initialState = {
   words: [],
   filtered: [],
   solved: false,
+  engaged: false,
 }
 
 export const GlobalContext = createContext(initialState);
@@ -27,7 +28,7 @@ export const GlobalProvider = ({
   // Actions for changing state
   function setGrid(data) {
     dispatch({
-      type: 'UPDATE_GRID',
+      type: 'UPDATE_GRID_CHAR',
       payload: data 
     });
   }
@@ -63,6 +64,7 @@ export const GlobalProvider = ({
         words: state.words,
         filtered: state.filtered,
         solved: state.solved, 
+        engaged: state.engaged, 
         setGrid,
         setSquare,
         setWords,

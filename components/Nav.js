@@ -39,8 +39,17 @@ export const Nav = () => {
             Hello There
             <span className="pl-1 pr-1" role="img" aria-label="wave">👋</span>
           </div>
-          <p className="pt-4">
             Thanks for taking the time to check out the WordleBot!
+          </p>
+          <p className="pt-4">
+            Make sure you check out the
+            <a href="https://github.com/SeanPlusPlus/wordlebot#how-to"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link link-primary pl-1 pr-1" >
+                how to
+            </a>
+            before you play.
           </p>
           <p className="pt-4">
             I&apos;ve been hacking together a little

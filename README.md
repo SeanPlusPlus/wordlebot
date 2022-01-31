@@ -37,7 +37,7 @@ https://www.powerlanguage.co.uk/wordle/
 
 Let's assume, for the sake of this example, that the word is `TACOS`.
 
-Okay, now let's help the 🤖 solve the wordle.
+Okay, now let's help the 🤖 solve the wordle. And see if it does better than we did!
 
 1️⃣ Go to https://wordlebot-seanplusplus.vercel.app/ and click `GENERATE THE FIRST WORD`
 

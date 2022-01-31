@@ -43,7 +43,7 @@ Okay, now let's help the 🤖 solve the wordle. And see if it does better than w
 
 1️⃣ Go to https://wordlebot-seanplusplus.vercel.app/ and click `GENERATE THE FIRST WORD`
 
-![one](https://i.imgur.com/3lWwqfI.png)
+![one](https://i.imgur.com/KtZhZX3.png)
 
 ---
 

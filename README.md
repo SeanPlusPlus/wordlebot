@@ -64,3 +64,9 @@ Now, look for the letters that are in our target word, but in the wrong position
 4️⃣ WordleBot generated the correct word!!! Click each square and let it know that the bot did a good job!
 
 ![four](https://i.imgur.com/heSe2sA.png)
+
+---
+
+⚪️ One thing to note. WordleBot selects the first word at random; so if we refresh the page and try again, another possible output could look like this:
+
+![another_way](https://i.imgur.com/HYUVZJP.png)

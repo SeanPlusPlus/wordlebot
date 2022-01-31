@@ -4,8 +4,6 @@ import { rand } from '../utils/rand'
 import { candidate } from '../utils/candidate'
 import { starting } from '../utils/starting'
 
-console.log(starting);
-
 export const Controls = () => {
   const [started, setStarted] = useState(false);
   const [disabled, setDisabled] = useState(true);

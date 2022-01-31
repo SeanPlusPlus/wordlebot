@@ -47,6 +47,6 @@ Okay, now let's help the 🤖 solve the wordle. And see if it does better than w
 
 ---
 
-2️⃣ A random word will be generated, in this example it's `SAUCE`. For each letter that is in the wordle (remember, the word in this example is `TACOS`) and if this letter is in the right position, click that letter one time, and the square will be green. Thus, cilck the `A` once.
+2️⃣ A random word will be generated, in this example it's `SAUCE`. Look at each letter that is in the generated word, and if that letter is in the right position, click that letter one time, and the square will be green. (Remember, the target word in this example is `TACOS`.) Thus, cilck the `A` once.
 
 ![two](https://i.imgur.com/WuZoJtu.png)

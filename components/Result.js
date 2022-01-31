@@ -19,9 +19,9 @@ export const Result = () => {
     <div className="pt-3 words">
       {solved && (
         <p>
-          We got it 
+          Got it 
           <span className="pl-1">
-            <span role="img" aria-label="smile">😃</span>
+            <span role="img" aria-label="check">❗️</span>
           </span>
         </p>
       )}

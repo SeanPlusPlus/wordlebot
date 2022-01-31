@@ -98,8 +98,7 @@ export const parseGrid = (grid, status, payload, new_row) => {
   })
   not_present = uniq(not_present);
 
-  // console.log(not_present, present);
-  log('NOT_PRESENT', 'yellow', not_present);
-  log('PRESENT', 'blue', present);
+  // log('NOT_PRESENT', 'yellow', not_present);
+  // log('PRESENT', 'blue', present);
   return ({ not_present, present });
 }

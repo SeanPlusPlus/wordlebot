@@ -39,6 +39,7 @@ export const Nav = () => {
             Hello There
             <span className="pl-1 pr-1" role="img" aria-label="wave">👋</span>
           </div>
+          <p className="pt-4">
             Thanks for taking the time to check out the WordleBot!
           </p>
           <p className="pt-4">

@@ -47,6 +47,18 @@ Okay, now let's help the 🤖 solve the wordle. And see if it does better than w
 
 ---
 
-2️⃣ A random word will be generated, in this example it's `SAUCE`. Look at each letter that is in the generated word, and if that letter is in the right position, click that letter one time, and the square will be green. (Remember, the target word in this example is `TACOS`.) Thus, cilck the `A` once.
+2️⃣ A random word will be generated, in this example it's `SAUCE`. Look at each letter that is in the generated word, and if that letter is in the right position, click that letter one time, and the square will be green. (Remember, the target word in this example is `TACOS`.) Thus, cilck the `A` once. And click `S` and `C` two times.
 
 ![two](https://i.imgur.com/WuZoJtu.png)
+
+---
+
+3️⃣ Click `GENERATE THE NEXT WORD`
+
+![three](https://i.imgur.com/4OKVoG3.png)
+
+---
+
+4️⃣ WordleBot generated the correct word!!! Click each square and let it know that the bot did a good job!
+
+![four](https://i.imgur.com/heSe2sA.png)

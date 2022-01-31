@@ -1,5 +1,4 @@
 import uniq from 'lodash/uniq';
-import { log } from '../utils/logger'
 
 export const getGrid = () => (
   Array(6).fill().map((x,i) => ( 

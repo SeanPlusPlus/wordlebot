@@ -1,5 +1,7 @@
 import uniq from 'lodash/uniq';
 import includes from 'lodash/includes';
+import { rand } from './rand';
+import { log } from './logger'
 
 const frequency = {
   'e': 12000,
@@ -41,6 +43,11 @@ const getRawScore = (word) => {
 }
 
 export const candidate = (array, selected) => {
+  if (array.length < 9) {
+    log('LESS THAN 10 REMAINING, PICK AT RANDOM', 'white', array);
+    return rand(array);
+  }
+
   // get a ranking of each word based on the
   // sum value of the frequency of each char
   // and multiply the sum by number of uniq chars

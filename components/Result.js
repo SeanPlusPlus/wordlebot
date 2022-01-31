@@ -17,14 +17,6 @@ export const Result = () => {
 
   return (
     <div className="pt-3 words">
-      {solved && (
-        <p>
-          Got it 
-          <span className="pl-1">
-            <span role="img" aria-label="check">❗️</span>
-          </span>
-        </p>
-      )}
       {!solved && (
         <>
           <p>

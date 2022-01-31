@@ -1,7 +1,5 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
-import { parseGrid } from '../utils/grid.js';
-import { filterWords } from '../utils/words.js';
 
 const getSquareStatus = (s) => {
   if (!s) {
@@ -15,7 +13,11 @@ const getSquareStatus = (s) => {
   return null
 }
 
-const getChar = (el) => {
+const getChar = (el, hide) => {
+  if (hide) {
+    return null
+  }
+ 
   if (el) {
     return el.toUpperCase()
   }
@@ -24,6 +26,7 @@ const getChar = (el) => {
 }
 
 export const Game = () => {
+  const [hide, setHide] = useState(false);
   const {
     grid: {
       rows,
@@ -77,18 +80,23 @@ export const Game = () => {
   }
 
   return (
-    rows.map((row, i) => (
-      <div key={i} className="grid grid-cols-5 p-2 gap-2">
-        {row.map((el, idx) => (
-          <div
-            key={idx}
-            onClick={() => handleClick(i, idx)}
-            className={`hover:cursor-pointer text-2xl border border-black-500 rounded p-3 h-14 w-12 align-middle ${getBackground(i, idx)}`}
-          >
-            {getChar(rows[i][idx])}
-          </div>
-        ))}
-      </div>
-    ))
+    <>
+      {rows.map((row, i) => (
+        <div key={i} className="grid grid-cols-5 p-2 gap-2">
+          {row.map((el, idx) => (
+            <div
+              key={idx}
+              onClick={() => handleClick(i, idx)}
+              className={`hover:cursor-pointer text-2xl border border-black-500 rounded p-3 h-14 w-12 align-middle ${getBackground(i, idx)}`}
+            >
+              {getChar(rows[i][idx], hide)}
+            </div>
+          ))}
+        </div>
+      ))}
+      {solved && !hide && (
+        <div className="btn mt-3" onClick={() => setHide(true)}>TOGGLE THE BOARD & SCREENSHOT</div>
+      )}
+    </>
   )
 }

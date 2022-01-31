@@ -26,3 +26,11 @@ npm install
 ```sh
 npm run dev
 ```
+
+### How To
+
+Here's how to play.
+
+1️⃣ Go to https://wordlebot-seanplusplus.vercel.app/ and click `GENERATE THE FIRST WORD`
+
+![one](https://i.imgur.com/3lWwqfI.png)

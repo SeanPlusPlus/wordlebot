@@ -43,7 +43,9 @@ const getRawScore = (word) => {
 }
 
 export const candidate = (array, selected) => {
-  if (array.length < 9) {
+  // if there are fewer than 10 remaining possibilities
+  // then select a word at random
+  if (array.length < 10) {
     log('LESS THAN 10 REMAINING, PICK AT RANDOM', 'white', array);
     return rand(array);
   }

@@ -2,19 +2,9 @@ import React, { useState, useContext, useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 import { rand } from '../utils/rand'
 import { candidate } from '../utils/candidate'
+import { starting } from '../utils/starting'
 
-const starting = [
-  'slate',
-  'sauce',
-  'slice',
-  'shale',
-  'saute',
-  'share',
-  'sooty',
-  'shine',
-  'suite',
-  'crane',
-]
+console.log(starting);
 
 export const Controls = () => {
   const [started, setStarted] = useState(false);

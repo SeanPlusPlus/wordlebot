@@ -1,5 +1,18 @@
 import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
+import _keys from 'lodash/keys'
+
+const copyTextToClipboard = (text) => {
+  if (!navigator.clipboard) {
+    fallbackCopyTextToClipboard(text);
+    return;
+  }
+  navigator.clipboard.writeText(text).then(function() {
+    console.log('Copying to clipboard was successful!');
+  }, function(err) {
+    console.error('Could not copy text: ', err);
+  });
+}
 
 const getSquareStatus = (s) => {
   if (!s) {
@@ -13,11 +26,7 @@ const getSquareStatus = (s) => {
   return null
 }
 
-const getChar = (el, hide) => {
-  if (hide) {
-    return null
-  }
- 
+const getChar = (el) => {
   if (el) {
     return el.toUpperCase()
   }
@@ -26,7 +35,8 @@ const getChar = (el, hide) => {
 }
 
 export const Game = () => {
-  const [hide, setHide] = useState(false);
+  const [ modal, setModal ] = useState('')
+
   const {
     grid: {
       rows,
@@ -79,6 +89,41 @@ export const Game = () => {
     }
   }
 
+  const handleCopy = () => {
+    console.log(status);
+    const keys = _keys(status)
+    console.log('keys', keys)
+    const squares = 5
+    console.log('squares', squares)
+    const lines = (keys.length / squares)
+    console.log('lines', lines)
+    const green = '🟩'
+    const yellow = '🟨'
+    const black = '⬛️'
+    const str = ''
+    for (var i = 0; i < lines; i++) {
+      for (var j = 0; j < squares; j++) {
+        var k = i + ':' + j
+        console.log('*', k, status[k]);
+        if (status[k] === 'valid') {
+          str += green
+        } else if (status[k] === 'exists') {
+          str += yellow
+        } else {
+          str += black 
+        }
+
+      }
+      str += '\n'
+    }
+    copyTextToClipboard(str);
+    setModal('modal-open')
+  }
+
+  const handleClose = () => {
+    setModal('')
+  }
+
   return (
     <>
       {rows.map((row, i) => (
@@ -89,14 +134,35 @@ export const Game = () => {
               onClick={() => handleClick(i, idx)}
               className={`hover:cursor-pointer text-2xl border border-black-500 rounded p-3 h-14 w-12 align-middle ${getBackground(i, idx)}`}
             >
-              {getChar(rows[i][idx], hide)}
+              {getChar(rows[i][idx])}
             </div>
           ))}
         </div>
       ))}
-      {solved && !hide && (
-        <div className="btn mt-3" onClick={() => setHide(true)}>TOGGLE THE BOARD & SCREENSHOT</div>
+      {solved && (
+        <div className="btn mt-3" onClick={() => handleCopy(true)}>
+          Copy results to the clipboard
+        </div>
       )}
+
+
+
+      <div className={`modal ${modal}`}>
+        <div className="modal-box">
+          <h3 className="font-bold text-xl flex">
+            <span className="ml-1 text-xl mb-4">
+              Success
+            </span>
+          </h3>
+          <p className="pt-4">
+            Results copied to clipboard
+          </p>
+          <div className="modal-action pt-5">
+            <label htmlFor="my-modal" className="btn" onClick={handleClose}>Close</label>
+          </div>
+        </div>
+      </div>
+
     </>
   )
 }

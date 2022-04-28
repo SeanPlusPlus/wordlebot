@@ -8,10 +8,26 @@ const copyTextToClipboard = (text) => {
     return;
   }
   navigator.clipboard.writeText(text).then(function() {
-    console.log('Copying to clipboard was successful!');
+    // console.log('Copying to clipboard was successful!');
   }, function(err) {
     console.error('Could not copy text: ', err);
   });
+}
+
+const getNumberOfDays = (start, end) => {
+  const date1 = new Date(start);
+  const date2 = new Date(end);
+
+  // One day in milliseconds
+  const oneDay = 1000 * 60 * 60 * 24;
+
+  // Calculating the time difference between two dates
+  const diffInTime = date2.getTime() - date1.getTime();
+
+  // Calculating the no. of days between two dates
+  const diffInDays = Math.round(diffInTime / oneDay);
+
+  return diffInDays;
 }
 
 const getSquareStatus = (s) => {
@@ -90,21 +106,18 @@ export const Game = () => {
   }
 
   const handleCopy = () => {
-    console.log(status);
     const keys = _keys(status)
-    console.log('keys', keys)
     const squares = 5
-    console.log('squares', squares)
     const lines = (keys.length / squares)
-    console.log('lines', lines)
     const green = '🟩'
     const yellow = '🟨'
     const black = '⬛️'
-    const str = ''
+    const genesis = '2022-04-28'
+    const n = getNumberOfDays(genesis, new Date()) + 312
+    const str = `Wordle ${n} ${lines}/6\n\n`
     for (var i = 0; i < lines; i++) {
       for (var j = 0; j < squares; j++) {
         var k = i + ':' + j
-        console.log('*', k, status[k]);
         if (status[k] === 'valid') {
           str += green
         } else if (status[k] === 'exists') {
@@ -112,7 +125,6 @@ export const Game = () => {
         } else {
           str += black 
         }
-
       }
       str += '\n'
     }
